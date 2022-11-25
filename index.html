@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Simple Weather App</title>
+  </head>
+  <body>
+    <header class="hero">
+      <h1 class="app-title">
+        <i class="fab fa-github"></i> Weather Search for My Location
+      </h1>
+      <p>Trying to make a widget that I can insert into my profile.</p>
+      <p>
+        API search for the weather in my area. also amy include a clickable for
+        10 day results!
+      </p>
+    </header>
+    <main>
+      <div>
+        <h2>
+          Current weather at my Location:<span id="CurrentWeatherCall"></span>
+        </h2>
+        <div id="CurrentWeather-container"></div>
+      </div>
+      <div>
+        <h2>
+          10 day:<span id="10DayCall"></span>
+        </h2>
+        <div id="10DayWeather-container" class="list-group"></div>
+      </div>
+    </main>
+    <script src="./assets/js/homepage.js"></script>
+  </body>
+</html>
