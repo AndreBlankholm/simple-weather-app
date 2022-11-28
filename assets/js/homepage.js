@@ -7,7 +7,7 @@ var weatherData = function () {
   ).then(function (response) {
     response.json().then(function (data) {
       console.log(data);
-      displayWeather(data, city);
+      //displayWeather(data, cod);
     });
   });
 
