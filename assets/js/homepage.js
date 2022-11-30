@@ -1,5 +1,5 @@
-
-
+var currentLocalEl = document.querySelector("#current-location-container");
+var currentTempEl = document.querySelector("#current-temp-container");
 
 var weatherData = function () {
   fetch(
@@ -7,18 +7,21 @@ var weatherData = function () {
   ).then(function (response) {
     response.json().then(function (data) {
       console.log(data);
-      //displayWeather(data, cod);
+      //console.log(data.city.name);
+      var cityName = data.city.name;
+      var kalvinTemp = data.list[0].main.temp_max;
+      var kavinToFahrenheitConversion = (kalvinTemp - 273.15) * 1.8 + 32;
+      var displaydegress = kavinToFahrenheitConversion.toFixed(1);
+
+      currentLocalEl.textContent = "";
+      currentLocalEl.textContent =
+        "I'm currently located in " +
+        cityName +
+        " and the current temp here is " +
+        displaydegress +
+        " degrees F.";
     });
   });
-
-  console.log("outside");
 };
-
-var displayWeather = function(city, name) {
-  console.log(city);
-  console.log(name);
-  
-};
-
 
 weatherData();
